@@ -1,0 +1,22 @@
+{
+  "name": "deepseek-serverless-backend",
+  "version": "1.0.0",
+  "description": "Serverless backend for DeepSeek AI chat",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "vercel build",
+    "deploy": "vercel --prod"
+  },
+  "keywords": ["deepseek", "ai", "serverless", "chat"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "vercel": "^33.0.0"
+  }
+}
