@@ -4,3 +4,8 @@ node_modules
 .vercel
 *.log
 .DS_Store
+
+# Cloudflare Workers
+.wrangler/
+.dev.vars
+wrangler.toml.bak

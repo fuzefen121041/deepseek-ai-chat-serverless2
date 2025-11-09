@@ -80,27 +80,53 @@ npm run dev
 }
 ```
 
-## 部署到 Vercel
+## 部署
 
-### 1. 安装 Vercel CLI
+本项目支持两种部署方式：
+
+### 方式一：部署到 Cloudflare Workers（推荐）
+
+Cloudflare Workers 提供更好的性能和免费额度。
+
+详细步骤请查看：**[Cloudflare 部署指南](./CLOUDFLARE_DEPLOY.md)**
+
+快速开始：
+
+```bash
+# 1. 安装依赖
+npm install
+
+# 2. 登录 Cloudflare
+npx wrangler login
+
+# 3. 设置 API 密钥
+npx wrangler secret put DEEPSEEK_API_KEY
+
+# 4. 部署
+npm run cf:deploy
+```
+
+### 方式二：部署到 Vercel
+
+#### 1. 安装 Vercel CLI
 
 ```bash
 npm install -g vercel
 ```
 
-### 2. 登录 Vercel
+#### 2. 登录 Vercel
 
 ```bash
 vercel login
 ```
 
-### 3. 部署
+#### 3. 部署
 
 ```bash
 vercel --prod
 ```
 
-### 4. 配置环境变量
+#### 4. 配置环境变量
 
 在 Vercel 项目设置中添加环境变量：
 - `DEEPSEEK_API_KEY`: 你的 DeepSeek API 密钥

@@ -1,0 +1,6 @@
+{
+  "query": "mutation TestSend($msg: String!) { sendMessage(message: $msg, conversationHistory: []) { message usage { promptTokens completionTokens totalTokens } } }",
+  "variables": {
+    "msg": "你好"
+  }
+}

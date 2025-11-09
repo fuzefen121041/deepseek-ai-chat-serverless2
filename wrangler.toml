@@ -1,0 +1,23 @@
+# Cloudflare Workers 配置文件
+name = "deepseek-chat-api"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+# Workers 日志配置
+[observability]
+enabled = true
+
+# 环境变量配置（本地开发使用）
+# 生产环境的密钥请使用 wrangler secret put DEEPSEEK_API_KEY 命令设置
+[vars]
+# DEEPSEEK_API_KEY = "your-api-key-here"  # 请勿在此直接填写，使用 wrangler secret
+
+# 开发环境配置
+[env.development]
+name = "deepseek-chat-api-dev"
+vars = { ENVIRONMENT = "development" }
+
+# 生产环境配置
+[env.production]
+name = "deepseek-chat-api"
+vars = { ENVIRONMENT = "production" }
